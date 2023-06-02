@@ -1,0 +1,263 @@
+﻿{
+	"TabLabel": "Chameleon Sketch",
+	"InitTabSize": [500, 350],
+	"InitTabPosition": [1600, 200],
+	"InitPyCmd": "import MaskingTool, importlib; importlib.reload(MaskingTool); sketch = MaskingTool.MaskingTool.MaskingTool(%JsonPath); sketch.mark_python_ready()",
+	"Root": {
+	  "SVerticalBox": {
+		"Slots": [
+		  {
+			"SExpandableArea": {
+			  "Aka": "ModelArea",
+			  "BorderImage": {
+				"Style": "FEditorStyle",
+				"Brush": "DetailsView.CategoryTop"
+			  },
+			  "HeaderPadding": [2, 2],
+			  "HeaderContent": {
+				"STextBlock": {
+				  "Text": "Mask Objects"
+				}
+			  },
+			  "Padding": [20, 0, 0, 0],
+			  "BodyContent": {
+				"SVerticalBox": {
+				  "Slots": [
+					{
+					  "AutoHeight": true,
+					  "SHorizontalBox": {
+						"Slots": [
+						  {
+							"SExpandableArea": {
+							  "Aka": "TreeViewArea",
+							  "BorderImage": {
+								"Style": "FEditorStyle",
+								"Brush": "DetailsView.CategoryTop"
+							  },
+							  "HeaderPadding": [2, 2],
+							  "HeaderContent": {
+								"STextBlock": {
+								  "Text": "Collection of Mask Objects"
+								}
+							  },
+							  "Padding": [5, 4, 0, 0],
+							  "BodyContent": {
+								"SVerticalBox": {
+								  "Slots": [
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "index (0)",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SComboBox": {
+											  "Aka": "ComboBoxA",
+											  "Content": {
+												"Text": "ComboBox"
+											  },
+											  "OptionsSource": []
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Combine method",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SComboBox": {
+											  "Aka": "ComboBoxCombineMethod",
+											  "Content": {
+												"Text": "ComboBox"
+											  },
+											  "OptionsSource": ["Add"],
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Invert",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SCheckBox": {
+											  "Aka": "CheckBoxInvert",
+											  "IsChecked": false,
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Mask Opacity",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SEditableTextBox": {
+											  "Aka": "EditableTextBoxMaskOpacity",
+											  "Text": "100.0",
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Mask Expansion",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SEditableTextBox": {
+											  "Aka": "EditableTextBoxMaskExpansion",
+											  "Text": "0",
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Mask Feather",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SEditableTextBox": {
+											  "Aka": "EditableTextBoxMaskFeather",
+											  "Text": "0",
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Show Object",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SCheckBox": {
+											  "Aka": "CheckBoxShowObject",
+											  "IsChecked": false,
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"STextBlock": {
+											  "Text": "Show only as Outline",
+											  "FillWidth": 1
+											}
+										  },
+										  {
+											"SCheckBox": {
+											  "Aka": "CheckBoxShowOutline",
+											  "IsChecked": false,
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"SButton": {
+											  "Aka": "ButtonAddMaskObject",
+											  "Text": "1. Add Mask Object",
+											  "OnClick": "sketch.add_mask_object()",
+											  "AutoHeight": true
+											}
+										  }										  										  
+										]
+									  }
+									},									
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										  {
+											"SButton": {
+											  "Aka": "ButtonAddMaskedGroup",
+											  "Text": "2. Add Masked Group",
+											  "OnClick": "sketch.add_masked_group()",
+											  "AutoHeight": true
+											}
+										  }
+										]
+									  }
+									},
+									{
+									  "SHorizontalBox": {
+										"Slots": [
+										{
+											"SButton": {
+												"Aka": "ButtonRunDemo",
+												"Text": "3. Run demo - apply mask",
+												"OnClick": "sketch.run_demo()",
+												"AutoHeight": true
+											}
+											}
+										]
+									  }
+									}
+								  ]
+								}
+							  }
+							}
+						  }
+						]
+					  }
+					}
+				  ]
+				}
+			  }
+			}
+		  }
+		]
+	  }
+	}
+  }
+  
